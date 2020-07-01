@@ -1,0 +1,47 @@
+.block-editor {
+
+    .acf-block-body .acf-block-fields {
+        border:0 !important;
+    }
+    
+    .acf-block-component .acf-block-fields {
+        background:rgb(248, 248, 248)  !important;
+        border:0 !important;    
+    }
+    
+    .acf-label label{
+        color:rgb(133, 133, 133);
+        font-size:12px;
+        font-weight:normal !important;
+    }
+    
+    .acf-input .acf-input-wrap input, .acf-input textarea {
+        background:transparent;
+        border:0;
+        font-family: 'Noto Serif', serif !important;
+        font-size:16px !important;
+        padding:0 !important;
+        border-radius:0 !important;
+    }
+    
+    .acf-input .acf-input-wrap input:focus {
+        border:0 !important;
+    }
+    
+    .acf-input textarea:focus {
+        border:0 !important;
+        border-color:transparent !important;
+        box-shadow:none;
+    }
+
+    .acf-checkbox-list {
+        margin-left:0;
+        padding-left: 0;
+    }
+
+}
+
+.wp-block {
+    max-width:40vw !important;
+}
+

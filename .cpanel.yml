@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/sjoepwdx/api.sjoerdkoelewijn.com.sjoerdkoelewijn.com/wp-content/themes/api.sjoerdkoelewijn
+    - /bin/cp -r * $DEPLOYPATH
