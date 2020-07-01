@@ -315,8 +315,8 @@ add_action('graphql_register_types', function () {
 			if (empty($errors)) wp_mail(
 				$sanitized_data['email'],
 				'Bevestiging van uw reactie',
-				'<div style="padding:40px;background-color:#F2F5F9;"><h1 style="color:#1F5C9D;">Nogmaals bedankt voor uw reactie.</h1> <p style="color:#1F5C9D;font-size:110%;">Hieronder vindt u een overzicht van de gegevens die u ingevuld heeft op de website. <br /><br />Naam:' . $sanitized_data['voornaam'] . ' ' . $sanitized_data['achternaam'] . '<br /><br />Woonplaats:' . $sanitized_data['woonplaats'] . '<br /><br />U gaf de Kopse Waard een waardering van ' . $sanitized_data['rating'] . ' uit 5' . '<br /><br />Uw opmerking: <br />' . $sanitized_data['opmerkingen'] . '</p></div>',
-				array('Content-Type: text/html; charset=UTF-8', 'From: De Kopse Waard <info@dekopsewaard.nl>', 'Cc: hello@sjoerdkoelewijn.com')
+				'<div style="padding:40px;background-color:#F2F5F9;"><h1 style="color:#1F5C9D;">Nogmaals bedankt voor uw reactie.</h1> <p style="color:#1F5C9D;font-size:110%;">Hieronder vindt u een overzicht van de gegevens die u ingevuld heeft op de website. <br /><br />Naam: ' . $sanitized_data['voornaam'] . ' ' . $sanitized_data['achternaam'] . '<br /><br />Woonplaats: ' . $sanitized_data['woonplaats'] . '<br /><br />U gaf de Kopse Waard een waardering van ' . $sanitized_data['rating'] . ' uit 5' . '<br /><br />Uw opmerking: <br />' . $sanitized_data['opmerkingen'] . '</p></div>',
+				array('Content-Type: text/html; charset=UTF-8', 'From: De Kopse Waard <info@dekopsewaard.nl>')
 			);	
 
 			//remove_filter('wp_mail_content_type', 'set_html_content_type');
