@@ -314,8 +314,8 @@ add_action('graphql_register_types', function () {
 
 			if (empty($errors)) wp_mail(
 				$sanitized_data['email'],
-				'Inspraak bevestiging - De Kopse Waard',
-				'Naam:' . $sanitized_data['voornaam'] . ' ' . $sanitized_data['achternaam'] . '<br /><br />Woonplaats:' . $sanitized_data['woonplaats'] . '<br /><br />' . $sanitized_data['rating'] . ' uit 5 sterren' . '<br /><br />Opmerkingen: <br />' . $sanitized_data['opmerkingen'],
+				'Bevestiging van uw reactie',
+				'<h1>Nogmaals bedankt voor uw reactie.</h1> <strong>Uw mening maakt de Kopse Waard nog beter.</strong><p style="font-size:120%;">Naam:' . $sanitized_data['voornaam'] . ' ' . $sanitized_data['achternaam'] . '<br /><br />Woonplaats:' . $sanitized_data['woonplaats'] . '<br /><br />U gaf de Kopse Waard een waardering van ' . $sanitized_data['rating'] . ' uit 5' . '<br /><br />Uw opmerking: <br />' . $sanitized_data['opmerkingen'] . '</p>',
 				array('Content-Type: text/html; charset=UTF-8', 'From: De Kopse Waard <info@dekopsewaard.nl>', 'Bcc: dekopsewaard@elburg.nl')
 			);	
 
