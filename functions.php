@@ -316,7 +316,7 @@ add_action('graphql_register_types', function () {
 				$sanitized_data['email'],
 				'Inspraak bevestiging - De Kopse Waard',
 				'Naam:' . $sanitized_data['voornaam'] . ' ' . $sanitized_data['achternaam'] . '<br /><br />Woonplaats:' . $sanitized_data['woonplaats'] . '<br /><br />' . $sanitized_data['rating'] . ' uit 5 sterren' . '<br /><br />Opmerkingen: <br />' . $sanitized_data['opmerkingen'],
-				array('Content-Type: text/html; charset=UTF-8', 'From: De Kopse Waard <dekopsewaard@elburg.nl>', 'Bcc: hello@sjoerdkoelewijn.com')
+				array('Content-Type: text/html; charset=UTF-8', 'From: De Kopse Waard <info@dekopsewaard.nl>', 'Bcc: dekopsewaard@elburg.nl')
 			);	
 
 			//remove_filter('wp_mail_content_type', 'set_html_content_type');
