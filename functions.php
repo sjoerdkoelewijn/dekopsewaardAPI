@@ -315,7 +315,7 @@ add_action('graphql_register_types', function () {
 			if (empty($errors)) wp_mail(
 				$sanitized_data['email'],
 				'Bevestiging van uw reactie',
-				'<h1>Nogmaals bedankt voor uw reactie.</h1> <strong>Uw mening maakt de Kopse Waard nog beter.</strong><p style="font-size:120%;">Naam:' . $sanitized_data['voornaam'] . ' ' . $sanitized_data['achternaam'] . '<br /><br />Woonplaats:' . $sanitized_data['woonplaats'] . '<br /><br />U gaf de Kopse Waard een waardering van ' . $sanitized_data['rating'] . ' uit 5' . '<br /><br />Uw opmerking: <br />' . $sanitized_data['opmerkingen'] . '</p>',
+				'<div style="padding:40px;background-color:#D9E5F1;"><h1 style="color:#1F5C9D;">Nogmaals bedankt voor uw reactie.</h1> <strong style="color:#1F5C9D;font-size:110%;">Hieronder vindt u een overzicht die u ungevuld heeft op de website.</strong><br /><br /><p style="color:#1F5C9D;font-size:110%;"><strong style="color:#1F5C9D;font-size:110%;>Naam:</strong><br />' . $sanitized_data['voornaam'] . ' ' . $sanitized_data['achternaam'] . '<br /><br /><strong style="color:#1F5C9D;font-size:110%;>Woonplaats:</strong><br />' . $sanitized_data['woonplaats'] . '<br /><br /><strong style="color:#1F5C9D;font-size:110%;>Waardering:</strong><br /> ' . $sanitized_data['rating'] . ' uit 5' . '<br /><br /><strong style="color:#1F5C9D;font-size:110%;>Uw opmerking / idee:</strong><br />' . $sanitized_data['opmerkingen'] . '</p></div>',
 				array('Content-Type: text/html; charset=UTF-8', 'From: De Kopse Waard <info@dekopsewaard.nl>', 'Bcc: dekopsewaard@elburg.nl')
 			);	
 
